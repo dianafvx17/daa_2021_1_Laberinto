@@ -1,0 +1,102 @@
+class  Array ( objeto ):
+
+    def  __init__ ( yo , tamano ):
+        yo . __tamano = tamano
+        yo . __array = [ 0  para  x  en el  rango ( self . __tamano )]
+
+    def  to_string ( self ):
+        imprimir ( "----" )
+        imprimir ( self . __array )
+
+    def  len ( yo ):
+        volver a  sí mismo . __tamano
+
+    def  set_item ( self , index , valor ):
+        si  yo . __check_limits__ ( índice ):
+            yo . __array [ índice ] = valor
+        otra cosa :
+            raise  Exception ( 'Error de limites en index' )
+
+    def  get_item ( self , index ):
+        volver a  sí mismo . __array [ índice ]
+
+    def  clear ( yo , valor ):
+        yo . __array = [ valor  para  x  en el  rango ( self . __tamano )]
+
+    def  __check_limits__ ( self , index ):
+        return  index  > = 0  e  index  <  self . __tamano
+
+clase  Array2D :
+
+    def  __init__ ( self , filas , columnas , valor ):
+        yo . __cols  =  cols
+        yo . __rows  =  filas
+        yo . __array = [[ valor  para  x  en  rango ( self . __cols )] para  y  en  rango ( self . __rows )]
+
+    def  to_string ( self ):
+        [ print ( "---" , end = "" ) para  x  en el  rango ( self . __cols )]
+        imprimir ( "" )
+        para  ren  en  uno mismo . __array :
+            imprimir ( ren )
+        [ print ( "---" , end = "" ) para  x  en el  rango ( self . __cols )]
+        imprimir ( "" )
+
+    def  get_num_rows ( self ):
+        volver a  sí mismo . __rows
+
+    def  get_num_cols ( self ):
+        volver a  sí mismo . __cols
+
+    def  get_item ( self , row , col ):
+        volver a  sí mismo . __array [ fila ] [ col ]
+
+    def  set_item ( self , row , col , valor ):
+        yo . __array [ fila ] [ col ] = valor
+
+    def  clearing ( self , valor = 0 ):
+        para  ren  en  rango ( self . __rows ):
+            para  col  en  rango ( self . __cols ):
+                yo . __array [ ren ] [ col ] = valor
+
+clase  Array3D :
+        def  __init__ ( self , profundidad , filas , columnas , valor ):
+            yo . __depth  =  profundidad
+            yo . __cols  =  cols
+            yo . __rows  =  filas
+            yo . __array  = [[[ valor  para  x  en  rango ( self . __cols )] para  y  en  rango ( self . __rows )] para  z  en  rango ( self . __depth )]
+
+
+        def  to_string ( self ):
+            [ print ( "---" , end = "" ) para  x  en el  rango ( self . __cols )]
+            imprimir ( "" )
+            dim  =  1
+            para  d  en  uno mismo . __array :
+                imprimir ( f "========= Atenuar { atenuar } ===========" )
+                para la  fila  en  d :
+                    imprimir ( fila )
+                tenue  + =  1
+            [ print ( "---" , end = "" ) para  x  en el  rango ( self . __cols )]
+            imprimir ( "" )
+
+
+
+        def  get_num_rows ( self ):
+            volver a  sí mismo . __rows
+
+        def  get_num_cols ( self ):
+            volver a  sí mismo . __cols
+
+        def  get_depth ( yo ):
+            volver a  sí mismo . __profundidad
+
+        def  get_item ( self , profundidad , fila , columna ):
+            volver a  sí mismo . __array [ profundidad ] [ fila ] [ col ]
+
+        def  set_item ( self , profundidad , fila , col , valor ):
+            yo . __array [ profundidad ] [ fila ] [ col ] = valor
+
+        def  clear ( self , valor = 0 ):
+            para  dep  en  rango ( self . __depth ):
+                para  ren  en  rango ( self . __rows ):
+                    para  col  en  rango ( self . __cols ):
+                        yo . set_item ( dep , ren , col , valor )
